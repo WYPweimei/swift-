@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DBC_TabBarView" id="zEA-UE-SvD" customClass="DBC_TabBarView" customModule="DBCSwift">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="76"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_base" translatesAutoresizingMaskIntoConstraints="NO" id="PJy-Ig-iQQ">
+                    <rect key="frame" x="0.0" y="15" width="326" height="61"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0A-sd-52W" userLabel="left">
+                    <rect key="frame" x="0.0" y="26" width="125" height="50"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pn-Wb-fEg" userLabel="home">
+                            <rect key="frame" x="0.0" y="0.0" width="62.5" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocN-Py-MrF">
+                                    <rect key="frame" x="0.0" y="0.0" width="62.5" height="50"/>
+                                    <state key="normal" image="tabbar_home_unselected"/>
+                                    <state key="selected" image="tabbar_home_selected"/>
+                                    <state key="highlighted" image="commond_selectde_home"/>
+                                    <connections>
+                                        <action selector="homeAction:" destination="zEA-UE-SvD" eventType="touchUpInside" id="7VY-Nw-iZe"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="ocN-Py-MrF" firstAttribute="top" secondItem="4Pn-Wb-fEg" secondAttribute="top" id="2qS-6j-im2"/>
+                                <constraint firstAttribute="bottom" secondItem="ocN-Py-MrF" secondAttribute="bottom" id="5Hi-hg-Cic"/>
+                                <constraint firstAttribute="trailing" secondItem="ocN-Py-MrF" secondAttribute="trailing" id="gwx-Pu-ZLu"/>
+                                <constraint firstItem="ocN-Py-MrF" firstAttribute="leading" secondItem="4Pn-Wb-fEg" secondAttribute="leading" id="jAQ-ae-kYW"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSL-bq-W2S" userLabel="need">
+                            <rect key="frame" x="62.5" y="0.0" width="62.5" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mej-t0-Kud">
+                                    <rect key="frame" x="0.0" y="0.0" width="62.5" height="50"/>
+                                    <state key="normal" image="tabbar_market_unselected"/>
+                                    <state key="selected" image="tabbar_market_selected"/>
+                                    <state key="highlighted" image="commond_selectde_need"/>
+                                    <connections>
+                                        <action selector="marketAction:" destination="zEA-UE-SvD" eventType="touchUpInside" id="Pcc-90-aEu"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="Mej-t0-Kud" firstAttribute="top" secondItem="wSL-bq-W2S" secondAttribute="top" id="G2F-1T-2yZ"/>
+                                <constraint firstAttribute="trailing" secondItem="Mej-t0-Kud" secondAttribute="trailing" id="II9-m3-DWW"/>
+                                <constraint firstAttribute="bottom" secondItem="Mej-t0-Kud" secondAttribute="bottom" id="sgS-Ls-wHd"/>
+                                <constraint firstItem="Mej-t0-Kud" firstAttribute="leading" secondItem="wSL-bq-W2S" secondAttribute="leading" id="z29-sq-FGf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="wSL-bq-W2S" firstAttribute="width" secondItem="4Pn-Wb-fEg" secondAttribute="width" id="680-my-Gnn"/>
+                        <constraint firstItem="wSL-bq-W2S" firstAttribute="top" secondItem="Z0A-sd-52W" secondAttribute="top" id="8RO-P7-GBV"/>
+                        <constraint firstAttribute="bottom" secondItem="4Pn-Wb-fEg" secondAttribute="bottom" id="CHE-qV-U5h"/>
+                        <constraint firstAttribute="height" constant="50" id="It7-Qy-k2H"/>
+                        <constraint firstItem="wSL-bq-W2S" firstAttribute="leading" secondItem="4Pn-Wb-fEg" secondAttribute="trailing" id="LMo-NR-eCJ"/>
+                        <constraint firstItem="4Pn-Wb-fEg" firstAttribute="top" secondItem="Z0A-sd-52W" secondAttribute="top" id="Sxe-1K-ssu"/>
+                        <constraint firstItem="4Pn-Wb-fEg" firstAttribute="leading" secondItem="Z0A-sd-52W" secondAttribute="leading" id="j7b-GK-knH"/>
+                        <constraint firstAttribute="trailing" secondItem="wSL-bq-W2S" secondAttribute="trailing" id="jg5-oC-tuY"/>
+                        <constraint firstAttribute="bottom" secondItem="wSL-bq-W2S" secondAttribute="bottom" id="k5n-gd-TRe"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7W-GO-xnp" userLabel="right">
+                    <rect key="frame" x="201" y="25" width="125" height="51"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGZ-5x-V8b" userLabel="mine">
+                            <rect key="frame" x="62.5" y="0.0" width="62.5" height="51"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIE-d2-5ry">
+                                    <rect key="frame" x="0.0" y="0.0" width="62.5" height="51"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" image="tabbar_me_unselected"/>
+                                    <state key="selected" image="tabbar_me_selected"/>
+                                    <state key="highlighted" image="commond_selectde_me"/>
+                                    <connections>
+                                        <action selector="userAction:" destination="zEA-UE-SvD" eventType="touchUpInside" id="Pif-zZ-SKq"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="qIE-d2-5ry" secondAttribute="trailing" id="Bjx-99-9w9"/>
+                                <constraint firstItem="qIE-d2-5ry" firstAttribute="top" secondItem="nGZ-5x-V8b" secondAttribute="top" id="GzX-6P-ecM"/>
+                                <constraint firstItem="qIE-d2-5ry" firstAttribute="leading" secondItem="nGZ-5x-V8b" secondAttribute="leading" id="Ukh-UW-3vM"/>
+                                <constraint firstAttribute="bottom" secondItem="qIE-d2-5ry" secondAttribute="bottom" id="gwu-9N-pAa"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBL-SH-1Pe" userLabel="find">
+                            <rect key="frame" x="0.0" y="0.0" width="62.5" height="51"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaX-mg-zg7">
+                                    <rect key="frame" x="0.0" y="0.0" width="62.5" height="51"/>
+                                    <state key="normal" image="tabbar_farmer_unselected"/>
+                                    <state key="selected" image="tabbar_farmer_selected"/>
+                                    <state key="highlighted" image="commond_selectde_farmer"/>
+                                    <connections>
+                                        <action selector="farmerAction:" destination="zEA-UE-SvD" eventType="touchUpInside" id="vGV-qj-Rdg"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="EaX-mg-zg7" secondAttribute="trailing" id="HcU-km-LFg"/>
+                                <constraint firstAttribute="bottom" secondItem="EaX-mg-zg7" secondAttribute="bottom" id="Mi9-4Q-dYs"/>
+                                <constraint firstItem="EaX-mg-zg7" firstAttribute="top" secondItem="CBL-SH-1Pe" secondAttribute="top" id="RZk-yZ-w6k"/>
+                                <constraint firstItem="EaX-mg-zg7" firstAttribute="leading" secondItem="CBL-SH-1Pe" secondAttribute="leading" id="geD-hN-jsJ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="nGZ-5x-V8b" firstAttribute="leading" secondItem="CBL-SH-1Pe" secondAttribute="trailing" id="65T-Y0-Ab8"/>
+                        <constraint firstAttribute="trailing" secondItem="nGZ-5x-V8b" secondAttribute="trailing" id="7kl-MH-oiV"/>
+                        <constraint firstAttribute="bottom" secondItem="CBL-SH-1Pe" secondAttribute="bottom" id="BLt-6V-PMK"/>
+                        <constraint firstAttribute="bottom" secondItem="nGZ-5x-V8b" secondAttribute="bottom" id="BQx-VO-NdJ"/>
+                        <constraint firstItem="nGZ-5x-V8b" firstAttribute="width" secondItem="CBL-SH-1Pe" secondAttribute="width" id="X4f-Vx-He2"/>
+                        <constraint firstItem="CBL-SH-1Pe" firstAttribute="leading" secondItem="e7W-GO-xnp" secondAttribute="leading" id="X4z-9W-jxR"/>
+                        <constraint firstItem="nGZ-5x-V8b" firstAttribute="top" secondItem="e7W-GO-xnp" secondAttribute="top" id="oA1-tY-Na4"/>
+                        <constraint firstItem="CBL-SH-1Pe" firstAttribute="top" secondItem="e7W-GO-xnp" secondAttribute="top" id="tQL-lX-6yS"/>
+                        <constraint firstAttribute="height" constant="51" id="v5T-2y-vhS"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIT-Tu-Itw" userLabel="public">
+                    <rect key="frame" x="125" y="0.0" width="76" height="76"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWi-Iu-5Nt">
+                            <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" image="tabbar_publish_defualt"/>
+                            <state key="selected" image="commond_selectde_publish"/>
+                            <connections>
+                                <action selector="publicAction:" destination="zEA-UE-SvD" eventType="touchUpInside" id="AwX-sp-9p3"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="SWi-Iu-5Nt" firstAttribute="leading" secondItem="IIT-Tu-Itw" secondAttribute="leading" id="IQ2-TZ-lsG"/>
+                        <constraint firstItem="SWi-Iu-5Nt" firstAttribute="top" secondItem="IIT-Tu-Itw" secondAttribute="top" id="NhN-yU-9bT"/>
+                        <constraint firstAttribute="width" secondItem="IIT-Tu-Itw" secondAttribute="height" multiplier="1:1" id="WwR-tM-j0h"/>
+                        <constraint firstAttribute="bottom" secondItem="SWi-Iu-5Nt" secondAttribute="bottom" id="j0L-CR-aYR"/>
+                        <constraint firstAttribute="trailing" secondItem="SWi-Iu-5Nt" secondAttribute="trailing" id="nr2-SC-UNI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Z0A-sd-52W" firstAttribute="leading" secondItem="zEA-UE-SvD" secondAttribute="leading" id="1dz-56-F2T"/>
+                <constraint firstAttribute="bottom" secondItem="e7W-GO-xnp" secondAttribute="bottom" id="A1W-iQ-E7r"/>
+                <constraint firstItem="PJy-Ig-iQQ" firstAttribute="leading" secondItem="zEA-UE-SvD" secondAttribute="leading" id="GWv-SK-6yH"/>
+                <constraint firstItem="e7W-GO-xnp" firstAttribute="leading" secondItem="IIT-Tu-Itw" secondAttribute="trailing" id="HCc-Fn-LOm"/>
+                <constraint firstAttribute="trailing" secondItem="e7W-GO-xnp" secondAttribute="trailing" id="HQn-xa-YIa"/>
+                <constraint firstItem="IIT-Tu-Itw" firstAttribute="centerX" secondItem="zEA-UE-SvD" secondAttribute="centerX" id="JRM-aq-0M8"/>
+                <constraint firstAttribute="trailing" secondItem="PJy-Ig-iQQ" secondAttribute="trailing" id="LNZ-i6-lAB"/>
+                <constraint firstAttribute="bottom" secondItem="PJy-Ig-iQQ" secondAttribute="bottom" id="VHu-U5-glf"/>
+                <constraint firstItem="IIT-Tu-Itw" firstAttribute="leading" secondItem="Z0A-sd-52W" secondAttribute="trailing" id="aNE-BK-Qu9"/>
+                <constraint firstItem="IIT-Tu-Itw" firstAttribute="top" secondItem="zEA-UE-SvD" secondAttribute="top" id="bMf-n4-b9l"/>
+                <constraint firstAttribute="bottom" secondItem="Z0A-sd-52W" secondAttribute="bottom" id="crN-ui-duc"/>
+                <constraint firstItem="PJy-Ig-iQQ" firstAttribute="top" secondItem="zEA-UE-SvD" secondAttribute="top" constant="15" id="fj9-1E-XIV"/>
+                <constraint firstAttribute="bottom" secondItem="IIT-Tu-Itw" secondAttribute="bottom" id="hw2-SE-wbm"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="farmerButton" destination="EaX-mg-zg7" id="xYq-P5-YbW"/>
+                <outlet property="homeButton" destination="ocN-Py-MrF" id="mdu-0f-t2e"/>
+                <outlet property="marketButton" destination="Mej-t0-Kud" id="urd-vx-I97"/>
+                <outlet property="publicButton" destination="SWi-Iu-5Nt" id="NHk-ji-0gA"/>
+                <outlet property="userButton" destination="qIE-d2-5ry" id="vIc-SL-pga"/>
+            </connections>
+            <point key="canvasLocation" x="496" y="220"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="commond_selectde_farmer" width="375" height="59"/>
+        <image name="commond_selectde_home" width="375" height="59"/>
+        <image name="commond_selectde_me" width="375" height="59"/>
+        <image name="commond_selectde_need" width="375" height="59"/>
+        <image name="commond_selectde_publish" width="375" height="59"/>
+        <image name="tabbar_base" width="375" height="59"/>
+        <image name="tabbar_farmer_selected" width="45" height="40"/>
+        <image name="tabbar_farmer_unselected" width="45" height="40"/>
+        <image name="tabbar_home_selected" width="45" height="40"/>
+        <image name="tabbar_home_unselected" width="45" height="40"/>
+        <image name="tabbar_market_selected" width="45" height="40"/>
+        <image name="tabbar_market_unselected" width="45" height="40"/>
+        <image name="tabbar_me_selected" width="45" height="40"/>
+        <image name="tabbar_me_unselected" width="45" height="40"/>
+        <image name="tabbar_publish_defualt" width="72" height="72"/>
+    </resources>
+</document>
